@@ -1,0 +1,93 @@
+/* Background styling */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Centered container */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Card with shadow */
+.signup-card {
+  background: #fff;
+  padding: 35px;
+  border-radius: 14px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Title */
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Inputs */
+.signup-card input,
+.signup-card select {
+  width: 70%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.signup-card input:focus,
+.signup-card select:focus {
+  border-color: #6a11cb;
+  outline: none;
+  box-shadow: 0 0 6px rgba(106, 17, 203, 0.5);
+}
+
+/* Button */
+.signup-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.signup-card button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 117, 252, 0.4);
+}
+
+/* Message */
+.message {
+  margin-top: 15px;
+  color: #444;
+  font-size: 14px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

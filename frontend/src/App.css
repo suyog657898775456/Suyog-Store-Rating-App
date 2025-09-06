@@ -1,0 +1,80 @@
+/* Global */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(120deg, #4facfe, #00f2fe);
+  min-height: 100vh;
+  color: #333;
+}
+
+/* App Container */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  margin-top: 20px;
+  border-radius: 20px;
+  background: #fff;
+  padding: 12px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 90vw;
+}
+
+/* Logo */
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4facfe;
+  letter-spacing: 1px;
+}
+
+/* Links */
+.nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: color 0.3s, transform 0.2s;
+  padding: 6px 12px;
+  border-radius: 6px;
+}
+
+.nav-links a:hover {
+  color: #fff;
+  background: linear-gradient(45deg, #4facfe, #00f2fe);
+  transform: translateY(-2px);
+}
+
+/* Page content */
+.page-content {
+  flex: 1;
+  padding: 40px 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-in-out;
+}

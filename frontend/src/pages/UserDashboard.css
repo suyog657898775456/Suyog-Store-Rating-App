@@ -1,0 +1,135 @@
+/* Dashboard Container */
+.dashboard-container {
+  margin: 20px;
+  padding: 20px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Messages */
+.message {
+  color: #28a745;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 18px;
+  animation: pulse 2s infinite;
+}
+
+/* Pulse Animation for Messages */
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+/* Store Grid */
+.store-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: flex-start;
+}
+
+/* Store Card */
+.store-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 280px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Card Hover Effect */
+.store-card:hover {
+  transform: translateY(-5px) scale(1.03);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Floating Background Animation */
+.store-card::before {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: linear-gradient(120deg, #a1c4fd, #c2e9fb);
+  top: -10%;
+  left: -10%;
+  transform: rotate(45deg);
+  opacity: 0.2;
+  pointer-events: none;
+  transition: all 0.5s;
+}
+
+.store-card:hover::before {
+  opacity: 0.35;
+  transform: rotate(25deg) scale(1.1);
+}
+
+/* Rating Buttons */
+.rating-options {
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rating-btn {
+  margin: 2px;
+  padding: 6px 12px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.rating-btn:hover {
+  background: #007bff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Search Bar */
+.search-bar {
+  width: 70%;
+  max-width: 400px;
+  padding: 12px 18px;
+  margin-bottom: 25px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: 2px solid #ccc;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  box-shadow: 0 6px 12px rgba(0, 123, 255, 0.2);
+  transform: scale(1.02);
+}

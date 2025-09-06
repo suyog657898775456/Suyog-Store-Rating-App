@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 # Suyog-Store-Rating-App
 
